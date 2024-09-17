@@ -1,0 +1,16 @@
+import { CheapLaptopBuilder } from "./Builder/CheapLaptopBuilder";
+import { ExpensiveLaptopBuilder } from "./Builder/ExpensiveLaptopBuilder";
+
+const builderCheap = new CheapLaptopBuilder();
+builderCheap.setRam(8);
+builderCheap.setStorage(256);
+builderCheap.setProcessor("Intel Core i5");
+const laptop1 = builderCheap.getLaptop();
+console.log(laptop1.getSpecs());
+
+const builderExpensive = new ExpensiveLaptopBuilder();
+builderExpensive.setRam(8);
+builderExpensive.setStorage(256);
+builderExpensive.setProcessor("Intel Core i9");
+const laptop2 = builderExpensive.getLaptop();
+console.log(laptop2.getSpecs());

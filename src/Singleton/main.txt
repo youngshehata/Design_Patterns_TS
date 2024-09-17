@@ -1,0 +1,9 @@
+import { Singleton } from "./Singleton/Singleton";
+
+const config = Singleton.getinstance();
+config.addVariable({ key: "jwt", value: "secret123" });
+// on some other file
+const config2 = Singleton.getinstance();
+// getting jwt by config2
+const jwtSecret = config2.getVariables("jwt");
+console.log(jwtSecret);
